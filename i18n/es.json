@@ -1,10 +1,10 @@
 {
   "description": "Ingeniero Full Stack construyendo aplicaciones web de alto rendimiento y herramientas para desarrolladores. Actualmente creando interfaces en Vercel",
   "nav": {
-    "about": "sobre mí",
-    "projects": "proyectos",
-    "experience": "experiencia",
-    "contact": "contacto"
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
   },
   "hero": {
     "title": "Ingeniero Full Stack",
