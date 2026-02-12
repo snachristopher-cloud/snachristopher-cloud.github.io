@@ -11,17 +11,18 @@ interface Props {
 const { nav } = Astro.props as Props;
 ---
 
-<header class="py-15 flex items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 bg-background z-40 w-full max-w-[1200px] px-6">
-    <div class="text-[1.2rem] font-bold tracking-tighter">
+<header class="py-6 md:py-15 flex flex-col md:flex-row items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 bg-background z-40 w-full max-w-[1200px] px-6">
+    
+    <div class="text-[1.5rem] md:text-[1.2rem] font-bold tracking-tighter mb-4 md:mb-0">
         CSA
     </div>
 
-    <nav class="flex items-center gap-5">
+    <nav class="flex items-center gap-4 md:gap-5">
         {
             nav.map((item) => (
                 <I18NDebug key={item.text}>
                     <a
-                        class="opacity-50 transition-all duration-200 hover:opacity-100 text-[1rem] md:text-[0.85rem]"
+                        class="opacity-50 transition-all duration-200 hover:opacity-100 text-[0.9rem] md:text-[0.85rem] whitespace-nowrap"
                         href={`/es/${item.path}`} 
                     >
                         {item.text}
