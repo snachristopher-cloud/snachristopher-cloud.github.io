@@ -18,36 +18,51 @@ const { status, email_label, email_url, github_label, github_url, x_label, x_url
 ---
 
 <footer
-    id={id}
-    class="my-24 border-t pt-8 text-sm grid grid-cols-1 gap-3 place-items-center"
+    id="Contacto" 
+    class="my-24 border-t pt-10 text-sm grid grid-cols-1 gap-4 place-items-center scroll-mt-48"
 >
-    <div>
+    <div class="flex items-center">
         <span
             class="inline-block w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"
         ></span>
-        <span class="opacity-70 uppercase">{status.value}</span>
+        <span class="opacity-70 uppercase tracking-widest text-[0.75rem]">{status.value}</span>
         <span
             class="inline-block w-2 h-2 rounded-full bg-green-500 ml-2 animate-pulse"
         ></span>
     </div>
 
-    <div class="flex gap-4 [&_a]:opacity-70 [&_a]:hover:opacity-100 [&_a]:transition-colors [&_a]:duration-200">
+    <div class="flex gap-6 [&_a]:transition-all [&_a]:duration-200">
         {email_url && email_label && (
-            <a href={email_url.value}>
+            <a 
+                href={email_url.value} 
+                class="opacity-70 hover:opacity-100 hover:text-green-500"
+            >
                 {email_label.value}
             </a>
         )}
         
         {github_label && (
-            <a class="cursor-not-allowed opacity-30 !hover:opacity-30" title="Temporalmente fuera de servicio">
+            <span 
+                class="cursor-not-allowed opacity-20" 
+                title="Temporalmente fuera de servicio"
+            >
                 {github_label.value}
-            </a>
+            </span>
         )}
 
         {linkedin_url && linkedin_label && (
-            <a href={linkedin_url.value} rel="nofollow">
+            <a 
+                href={linkedin_url.value} 
+                rel="noopener noreferrer" 
+                target="_blank"
+                class="opacity-70 hover:opacity-100 hover:text-green-500"
+            >
                 {linkedin_label.value}
             </a>
         )}
     </div>
+
+    <p class="mt-4 opacity-30 text-[0.65rem] uppercase tracking-tighter">
+        © 2026 Christopher - Cloud Engineer
+    </p>
 </footer>
