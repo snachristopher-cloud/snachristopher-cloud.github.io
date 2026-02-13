@@ -128,7 +128,7 @@
     }
   },
   "contact": {
-    "status": "Disponible para trabajo",
+    "status": "Disponible para trabajo/",
     "email_label": "Email",
     "email_url": "mailto:snachristopher@gmail.com",
     "github_label": "GitHub",
