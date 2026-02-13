@@ -18,23 +18,19 @@ interface Props {
 const { title, projects } = Astro.props as Props;
 ---
 
-<section id="projects" class="scroll-mt-50">
+<section id="Proyectos" class="scroll-mt-32">
     <I18NDebug key={title.key}>
         <h2 class="opacity-50 uppercase mb-6">{title.value}</h2>
     </I18NDebug>
 
     <ul class="space-y-3">
         {
-            // .slice(0, 6) toma los primeros 6 y deja fuera los últimos 2
             projects.slice(0, 6).map((project) => (
                 <li class="group">
                     <I18NDebug key={project.nameKey}>
-                        <span
-                            class="mb-5 font-semibold transition-all duration-200 text-green-500"
-                        >
+                        <span class="mb-5 font-semibold transition-all duration-200 text-green-500">
                             {project.name}
                         </span>
-                        
                         <Arrow class="h-3 w-3 inline text-green-500 ml-1" />
                     </I18NDebug>
 
