@@ -25,28 +25,19 @@ const { title, projects } = Astro.props as Props;
 
     <ul class="space-y-3">
         {
-            projects.map((project) => (
+            // .slice(0, 6) toma los primeros 6 y deja fuera los últimos 2
+            projects.slice(0, 6).map((project) => (
                 <li class="group">
                     <I18NDebug key={project.nameKey}>
-                        {project.link ? (
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                name={project.name}
-                                class="mb-5 font-semibold transition-all duration-200 group-hover:text-green-500 "
-                            >
-                                {project.name}
-                            </a>
-                        ) : (
-                            <span
-                                class="mb-5 font-semibold transition-all duration-200 group-hover:text-green-500 "
-                            >
-                                {project.name}
-                            </span>
-                        )}
-                        <Arrow class="h-3 w-3 inline transition-all text-green-500  duration-200 invisible opacity-0 group-hover:visible group-hover:opacity-100" />
+                        <span
+                            class="mb-5 font-semibold transition-all duration-200 text-green-500"
+                        >
+                            {project.name}
+                        </span>
+                        
+                        <Arrow class="h-3 w-3 inline text-green-500 ml-1" />
                     </I18NDebug>
+
                     <I18NDebug key={project.descriptionKey}>
                         <p class="opacity-50 text-[0.88rem]">
                             {project.description}
